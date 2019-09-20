@@ -1,0 +1,115 @@
+@import './mixin';
+.things {
+    padding: 100px 170px 40px;
+    color: black;
+    background: linear-gradient(236deg, #ffebe2, #ffdfdf);
+}
+
+.things__container {
+    width: 100%;
+    max-width: 1500px;
+}
+
+.things__title__wrap {
+    text-align: center;
+}
+
+.things__list {
+    display: flex;
+    margin: 70px -45px 130px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.things__list__item {
+    width: 33.3%;
+    margin-bottom: 60px;
+    padding: 0 45px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.things__list__item__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background: #fff;
+    border: 3px solid black;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 3px solid black;
+        top: -15px;
+        right: -15px;
+        z-index: -1;
+    }
+    &:focus {
+        transform: translate(10px, 10px);
+        &:before {
+            visibility: hidden;
+        }
+    }
+}
+
+.things__content__img {
+    width: 100%;
+    height: 150px;
+}
+
+.things__item__content__img {
+    margin-bottom: 20px;
+}
+
+.things__item__content__txt {
+    font-size: 22px;
+}
+
+// ==media
+.things {
+    @include lg {
+        padding: 50px 100px 20px;
+    }
+}
+
+.things__list__item {
+    @include lg {
+        width: 50%;
+        padding: 0 20px;
+    }
+}
+
+.things__list {
+    @include lg {
+        margin: 70px -20px 20px;
+    }
+}
+
+// ===media md==
+.things {
+    @include md {
+        padding: 45px 45px 0px;
+    }
+}
+
+.things__list__item {
+    @include md {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.things__list {
+    @include md {
+        margin: 0 -20px 60px;
+    }
+}
+
+.things__title__wrap {
+    @include md {
+        margin-bottom: 40px;
+    }
+}

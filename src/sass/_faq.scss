@@ -1,0 +1,120 @@
+@import './mixin';
+.faq {
+    padding: 100px 200px;
+    background: #f06467;
+}
+
+.faq__title__wrap {
+    margin: 100px 0 80px;
+    text-align: center;
+}
+
+.container__faq {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq__title {
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.faq__item__content__title {
+    color: #fff;
+}
+
+.faq__list {
+    margin: 0 -65px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.faq__list__item {
+    width: 50%;
+    padding: 0 65px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.faq__item__content__img {
+    margin-bottom: 50px;
+}
+
+.faq__item__content__title {
+    margin-bottom: 30px;
+}
+
+.faq__item__content__txt {
+    font-size: 22px;
+    letter-spacing: normal;
+}
+
+.faq__item__img__wrap {
+    margin-bottom: 50px;
+}
+
+// ===media
+.faq {
+    @include lg {
+        padding: 50px 50px;
+    }
+}
+
+.faq__list {
+    @include lg {
+        margin: 0 -30px;
+    }
+    & .faq__list__item {
+        @include lg {
+            padding: 0 30px;
+        }
+    }
+}
+
+.faq__item__content__txt {
+    @include lg {
+        font-size: 20px;
+    }
+}
+
+// === media MD===
+.faq {
+    @include md {
+        padding: 50px 30px;
+    }
+}
+
+.faq__list__item {
+    @include md {
+        margin-bottom: 40px;
+        padding: 0 25px;
+        width: 100%;
+    }
+}
+
+.faq__list {
+    @include md {
+        margin: 0 -20px;
+    }
+}
+
+.faq__title__wrap {
+    @include md {
+        margin: 0 0 40px;
+    }
+}
+
+.faq__item__content__txt {
+    @include md {
+        font-size: 18px;
+        line-height: 25px;
+    }
+}

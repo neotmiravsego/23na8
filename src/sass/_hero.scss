@@ -1,0 +1,137 @@
+@import "./mixin";
+.hero {
+    position: relative;
+    padding: 100px 40px;
+    background-image: linear-gradient(250deg, #ffebe2, #ffdfdf);
+}
+
+.container1 {
+    padding: 20px;
+}
+
+.hero__img__left {
+    position: absolute;
+    left: 0;
+    width: 330px;
+}
+
+.hero__img__right {
+    position: absolute;
+    right: 0;
+    width: 300px;
+}
+
+.hero__container {
+    padding: 100px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__title__wrap {
+    width: 100%;
+    max-width: 620px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.description__title {
+    margin-bottom: 80px;
+    color: black;
+    font-size: 24px;
+}
+
+.description__title__adaptive {
+    display: none;
+    margin-bottom: 80px;
+    color: black;
+    font-size: 20px;
+}
+
+// ==media==
+.hero__img__left {
+    @include lg {
+        width: 242px;
+        bottom: -90px;
+        left: -50px;
+    }
+}
+
+.hero__img__right {
+    @include lg {
+        width: 160px;
+        top: 26px;
+    }
+}
+
+.hero {
+    @include lg {
+        padding: 90px 70px;
+    }
+    & .hero__container {
+        @include lg {
+            padding: 0;
+        }
+    }
+    & .hero__title__wrap {
+        @include lg {
+            max-width: 560px;
+            margin-bottom: 20px;
+        }
+    }
+    & .description__title {
+        @include lg {
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+    & .description__title {
+        @include lg {
+            display: none;
+        }
+    }
+    & .description__title__adaptive {
+        @include lg {
+            display: block;
+        }
+    }
+}
+
+// === media MD===
+.hero {
+    @include md {
+        padding: 50px 20px;
+    }
+}
+
+.hero__container {
+    @include md {
+        padding: 0;
+    }
+}
+
+.hero__img__left {
+    @include md {
+        width: 153px;
+        top: 200px;
+        left: -5px;
+    }
+}
+
+.hero__img__right {
+    @include md {
+        width: 148px;
+        top: 200px;
+    }
+}
+
+.description__title {
+    @include md {
+        margin-bottom: 190px;
+        font-size: 16px;
+        text-align: center;
+    }
+}

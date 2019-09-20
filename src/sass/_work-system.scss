@@ -1,0 +1,116 @@
+@import './mixin';
+.work__system {
+    color: black;
+    padding: 100px 0px;
+}
+
+.work__system__container {
+    margin: 0 auto;
+    max-width: 1500px;
+    width: 100%;
+    padding: 100px 160px 0;
+    text-align: center;
+}
+
+.work__system__title {
+    margin-bottom: 60px;
+}
+
+.work__system__list {
+    margin: 0 -25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work__system__list__item {
+    width: 33.3%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.work__system__list__item:last-child {
+    margin-right: 0px;
+}
+
+.work__system__content__txt {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.work__system__content__nomber {
+    padding: 10px 20px;
+    border-radius: 50%;
+    background: #f06464;
+    color: #fff;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.work__system__item__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work__system__img__wrap {
+    margin-bottom: 20px;
+}
+
+// ===media==
+.work__system__container {
+    @include lg {
+        padding: 0;
+    }
+}
+
+.work__system {
+    @include lg {
+        padding: 100px;
+    }
+}
+
+.work__system__img {
+    @include lg {
+        height: 150px;
+        widows: 150px;
+    }
+}
+
+.work__system__list__item {
+    padding: 0 25px;
+    & .work__system__content__txt {
+        font-size: 18px;
+    }
+    & .work__system__txt__none {
+        @include lg {
+            display: none;
+        }
+    }
+}
+
+// === media MD
+.work__system {
+    @include md {
+        padding: 50px 30px;
+    }
+}
+
+.work__system__container {
+    @include md {
+        padding: 0 0px;
+    }
+    & .work__system__list__item {
+        @include md {
+            position: relative;
+            width: 100%;
+        }
+        & .work__system__content__nomber {
+            @include md {
+                position: absolute;
+                left: 40px;
+                top: - 30px;
+            }
+        }
+    }
+}
